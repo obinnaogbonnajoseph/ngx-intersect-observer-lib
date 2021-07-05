@@ -28,4 +28,16 @@ describe('NgxIntersectObserverComponent', () => {
     expect(div.className).toEqual('row');
     expect(div.getAttribute('id')).toEqual('intersect-div')
   })
+
+  it('should set intersection observer', () => {
+    component.ngOnChanges({});
+    expect(component.intersectionObserver).toBeDefined();
+  })
+
+  it('should disconnect observer', () => {
+    component.ngOnChanges({});
+    spyOn(component.intersectionObserver, 'disconnect');
+    component.ngOnDestroy();
+    expect(component.intersectionObserver.disconnect).toHaveBeenCalled();
+  })
 });
