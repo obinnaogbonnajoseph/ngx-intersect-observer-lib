@@ -8,9 +8,9 @@ describe('NgxIntersectObserverComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxIntersectObserverComponent ]
+      declarations: [NgxIntersectObserverComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,10 @@ describe('NgxIntersectObserverComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a div in the template with class, row and id intersect-div', () => {
+    const div: HTMLDivElement = fixture.debugElement.nativeElement.querySelector('#intersect-div');
+    expect(div.className).toEqual('row');
+    expect(div.getAttribute('id')).toEqual('intersect-div')
+  })
 });

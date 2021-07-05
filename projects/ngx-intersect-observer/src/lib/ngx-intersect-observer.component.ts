@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-intersect-observer',
+  selector: 'ngx-intersect-observer',
   template: `
     <div class="row"
       id="intersect-div">
@@ -30,7 +30,7 @@ export class NgxIntersectObserverComponent implements OnInit, OnChanges, OnDestr
   @Input()
   intersectionObserverInit: IntersectionObserverInit = {};
 
-  constructor(public elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnDestroy(): void {
     this.intersectionObserver?.disconnect();
@@ -42,7 +42,7 @@ export class NgxIntersectObserverComponent implements OnInit, OnChanges, OnDestr
 
   ngOnInit(): void { }
 
-  intersectionObserverCB: IntersectionObserverCallback = (entries, observers) => {
+  private intersectionObserverCB: IntersectionObserverCallback = (entries, _) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && this.intersectionCondition) {
         this.actionOnIntersection();
@@ -50,14 +50,14 @@ export class NgxIntersectObserverComponent implements OnInit, OnChanges, OnDestr
     })
   }
 
-  monitorForIntersection() {
+  private monitorForIntersection() {
     const intersectDiv = this.elementRef.nativeElement.querySelector('#intersect-div');
     if (intersectDiv) {
       this.observeIntersection(intersectDiv, this.intersectionObserverCB);
     }
   }
 
-  observeIntersection(intersectDiv: any, callback: IntersectionObserverCallback) {
+  private observeIntersection(intersectDiv: any, callback: IntersectionObserverCallback) {
     this.intersectionObserver = new IntersectionObserver(callback, this.intersectionObserverInit);
     this.intersectionObserver.observe(intersectDiv);
   }
