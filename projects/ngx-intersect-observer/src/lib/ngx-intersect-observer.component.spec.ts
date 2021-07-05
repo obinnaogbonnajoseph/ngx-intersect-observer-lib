@@ -29,12 +29,12 @@ describe('NgxIntersectObserverComponent', () => {
     expect(div.getAttribute('id')).toEqual('intersect-div')
   })
 
-  it('should set intersection observer', () => {
+  it('should set intersection observer on ngOnChanges', () => {
     component.ngOnChanges({});
     expect(component.intersectionObserver).toBeDefined();
   })
 
-  it('should disconnect observer', () => {
+  it('should disconnect observer on ngOnDestroy', () => {
     component.ngOnChanges({});
     spyOn(component.intersectionObserver, 'disconnect');
     component.ngOnDestroy();
