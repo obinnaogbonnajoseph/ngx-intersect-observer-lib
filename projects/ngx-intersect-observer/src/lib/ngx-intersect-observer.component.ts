@@ -28,7 +28,9 @@ export class NgxIntersectObserverComponent implements OnInit, OnChanges, OnDestr
   actionOnIntersection: () => void = () => { };
 
   @Input()
-  intersectionObserverInit: IntersectionObserverInit = {};
+  intersectionObserverInit: IntersectionObserverInit = {
+    threshold: 0.5,
+  };
 
   constructor(private elementRef: ElementRef) { }
 
