@@ -1,0 +1,44 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+img {
+  border-radius: 8px;
+}
+
+input {
+  margin-left: 8px;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  section {
+    max-width: 80%
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section {
+    max-width: 50%;
+  }
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+aside {
+  margin-left: 16px;
+  align-self: center;
+}
