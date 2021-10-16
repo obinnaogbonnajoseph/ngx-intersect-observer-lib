@@ -48,6 +48,10 @@ export class AppModule {}
 | **intersectionCondition**    | boolean                                                                                           | true             | Extra condition(s) to be met for actionOnIntersection to be called                             |
 | **intersectionObserverInit** | [IntersectionObserverInit](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) | {threshold: 0.5} | [Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#properties) |
 
+## Issues and Pull Requests
+
+Please file issues and open pull requests [here](https://github.com/obinnaogbonnajoseph/ngx-intersect-observer-lib/issues). Thank you.
+
 ## Licence
 
 MIT
