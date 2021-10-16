@@ -14,7 +14,7 @@ You can asynchronously observe changes in the intersection of a target element w
 
 ## DEMO
 
-@see [DEMO HERE](https://h2qutc.github.io/angular-material-components/)
+@see [DEMO HERE](https://obinnaogbonnajoseph.github.io/ngx-intersect-observer-lib/)
 
 ## Getting started
 
