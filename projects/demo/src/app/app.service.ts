@@ -15,8 +15,6 @@ export interface MovieResponse {
 })
 export class AppService {
 
-  baseUrl = `https://www.omdbapi.com/?apikey=${environment.movieApiKey}`;
-
   constructor(private http: HttpClient) { }
 
 
@@ -28,6 +26,6 @@ export class AppService {
           .set('s', search)
           .set('page', page)
       } : {}
-    return this.http.get<MovieResponse>(this.baseUrl, options)
+    return this.http.get<MovieResponse>(environment.baseUrl, options)
   }
 }
