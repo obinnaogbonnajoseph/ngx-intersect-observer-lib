@@ -4,9 +4,9 @@
 
 You can asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.With this, you can easily implement:
 
-- Lazy-loading of images or ohter content as a page is scrolled.
+- Lazy-loading of images or other content as a page is scrolled.
 
-- Implementing "infinite scrolling" web sites, when more and more content is loaded and rendered as you scrorll, so that the user doesn't have to flip through pages.
+- Implementing "infinite scrolling" web sites, when more and more content is loaded and rendered as you scroll, so that the user doesn't have to flip through pages.
 
 - Reporting of visibility of advertisements in order to calculate ad revenues.
 
