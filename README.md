@@ -1,27 +1,53 @@
-# NgxIntersectObserverLib
+# Angular library that implements the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+## Description
 
-## Development server
+You can asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.With this, you can easily implement:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Lazy-loading of images or ohter content as a page is scrolled.
 
-## Code scaffolding
+- Implementing "infinite scrolling" web sites, when more and more content is loaded and rendered as you scrorll, so that the user doesn't have to flip through pages.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Reporting of visibility of advertisements in order to calculate ad revenues.
 
-## Build
+- Deciding whether or not to perform tasks or animation processes based on whether or not the user will see the result.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## DEMO
 
-## Running unit tests
+@see [DEMO HERE](https://h2qutc.github.io/angular-material-components/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting started
 
-## Running end-to-end tests
+```
+  npm install --save ngx-intersect-observer
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup
 
-## Further help
+```
+import { NgxIntersectObserverModule } from 'ngx-intersect-observer';
+@NgModule({
+  ...
+  imports: [
+    ...
+    NgxIntersectObserverModule
+  ]
+})
+export class AppModule {}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Using the component
+
+```
+  <ngx-intersect-observer [actionOnIntersection]="actionOnIntersection" [intersectionObserverInit]="intersectionObserInit" [intersectionCondition]="intersectionCondition"></ngx-intersect-observer>
+```
+
+| @Input                       | Type                                                                                              | Default value    | Description                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------- |
+| **actionOnIntersection**     | function                                                                                          | void             | function to be called when target element is visible and intersection conditions are met       |
+| **intersectionCondition**    | boolean                                                                                           | true             | Extra condition(s) to be met for actionOnIntersection to be called                             |
+| **intersectionObserverInit** | [IntersectionObserverInit](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) | {threshold: 0.5} | [Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#properties) |
+
+## Licence
+
+MIT

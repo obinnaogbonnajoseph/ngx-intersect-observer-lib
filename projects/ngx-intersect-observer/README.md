@@ -1,4 +1,4 @@
-# NgxIntersectObserver Angular library that implements the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+# Angular library that implements the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 ## Description
 
@@ -20,13 +20,11 @@ You can asynchronously observe changes in the intersection of a target element w
 
 ```
   npm install --save ngx-intersect-observer
-
 ```
 
 ## Setup
 
 ```
-
 import { NgxIntersectObserverModule } from 'ngx-intersect-observer';
 @NgModule({
   ...
@@ -36,14 +34,12 @@ import { NgxIntersectObserverModule } from 'ngx-intersect-observer';
   ]
 })
 export class AppModule {}
-
 ```
 
 ## Using the component
 
 ```
   <ngx-intersect-observer [actionOnIntersection]="actionOnIntersection" [intersectionObserverInit]="intersectionObserInit" [intersectionCondition]="intersectionCondition"></ngx-intersect-observer>
-
 ```
 
 | @Input                       | Type                                                                                              | Default value    | Description                                                                                    |
