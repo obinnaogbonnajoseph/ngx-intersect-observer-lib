@@ -1,16 +1,17 @@
 <main>
   <section>
-    <h4>Enter a movie title</h4>
-    <input (change)="onChange($event)"
+    <label for="movie-input">Enter a movie title</label>
+    <input id="movie-input"
+      (change)="onChange($event)"
       type="text">
   </section>
   <section>
     <div *ngFor="let movie of movies">
       <img [src]="movie.Poster" />
-      <h4>{{movie.Title}}</h4>
-      <h3>{{movie.Type}}</h3>
-      <h2>{{movie.Year}}</h2>
-      <h1>{{movie.imdbID}}</h1>
+      <aside>
+        <h2>{{movie.Title | titlecase}} (<span>{{movie.Type | titlecase}}</span>)</h2>
+        <h4>{{movie.Year}}</h4>
+      </aside>
     </div>
     <ngx-intersect-observer [actionOnIntersection]="actionOnIntersection"></ngx-intersect-observer>
   </section>
