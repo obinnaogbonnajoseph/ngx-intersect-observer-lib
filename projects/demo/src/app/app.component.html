@@ -1,14 +1,17 @@
-<main class="container"
-  *ngIf="pets">
-  <section class="pet"
-    *ngFor="let pet of pets">
-    <img [src]="pet.img" />
-    <div class="pet-description">
-      <h2 classs="pet-name">{{pet.name}}</h2>
-      <h4 class="pet-description">{{pet.description}}</h4>
-    </div>
+<main>
+  <section>
+    <h4>Enter a movie title</h4>
+    <input (change)="onChange($event)"
+      type="text">
   </section>
-  <ngx-intersect-observer [actionOnIntersection]="loadMorePets()"
-    [intersectionCondition]="isMorePetsAvailable"
-    [intersectionObserverInit]="intersectionObserverInit"></ngx-intersect-observer>
+  <section>
+    <div *ngFor="let movie of movies">
+      <img [src]="movie.Poster" />
+      <h4>{{movie.Title}}</h4>
+      <h3>{{movie.Type}}</h3>
+      <h2>{{movie.Year}}</h2>
+      <h1>{{movie.imdbID}}</h1>
+    </div>
+    <ngx-intersect-observer [actionOnIntersection]="actionOnIntersection"></ngx-intersect-observer>
+  </section>
 </main>
