@@ -15,7 +15,7 @@ export interface MovieResponse {
 })
 export class AppService {
 
-  baseUrl = `http://www.omdbapi.com/?apikey=${environment.movieApiKey}`;
+  baseUrl = `https://www.omdbapi.com/?apikey=${environment.movieApiKey}`;
 
   constructor(private http: HttpClient) { }
 
