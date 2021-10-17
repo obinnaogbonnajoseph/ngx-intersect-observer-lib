@@ -1,6 +1,6 @@
 {
   "name": "ngx-intersect-observer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Intersection Observer implementation for Angular",
   "author": "Obinna Ogbonna",
   "repository": {
