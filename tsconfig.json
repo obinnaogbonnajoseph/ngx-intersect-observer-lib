@@ -15,6 +15,9 @@
       "ngx-intersect-observer": [
         "dist/ngx-intersect-observer/ngx-intersect-observer",
         "dist/ngx-intersect-observer"
+      ],
+      "@angular/*": [
+        "./node_modules/@angular/*"
       ]
     },
     "experimentalDecorators": true,
