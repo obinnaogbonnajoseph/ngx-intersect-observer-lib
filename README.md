@@ -16,6 +16,15 @@ You can asynchronously observe changes in the intersection of a target element w
 
 @see [DEMO HERE](https://obinnaogbonnajoseph.github.io/ngx-intersect-observer-lib/)
 
+Choose the version corresponding to your Angular version:
+
+| Angular | ngx-intersect-observer |
+| ------- | ---------------------- |
+| 12      | 1.x+                   |
+| 11      | 2.x+                   |
+| 10      | 3.x+                   |
+| 9       | 3.x+                   |
+
 ## Getting started
 
 ```
